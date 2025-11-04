@@ -50,8 +50,8 @@ Proses analisis, *feature engineering*, dan pelatihan model lengkap dapat diliha
 
 1.  **Clone Repositori:**
     ```bash
-    git clone [URL_REPOSITORI_ANDA]
-    cd [NAMA_FOLDER_ANDA]
+    git clone https://github.com/citylighxts/healthcare-model.git
+    cd healthcare-model
     ```
 
 2.  **Buat dan Aktifkan Virtual Environment:**
