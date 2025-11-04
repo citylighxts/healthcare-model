@@ -49,23 +49,19 @@ def user_input_features():
     medication = st.sidebar.selectbox('Obat-obatan', 
                                       ('Aspirin', 'Lipitor', 'Penicillin', 'Paracetamol', 'Ibuprofen'))
     st.sidebar.subheader("Administrasi")
-    insurance_provider = st.sidebar.selectbox('Provider Asuransi', 
-                                              ('Aetna', 'Blue Cross', 'Cigna', 'Unitedhealthcare', 'Medicare'))
     billing_amount = st.sidebar.number_input('Jumlah Tagihan ($)', min_value=100.0, max_value=50000.0, value=25000.0, step=100.0)
     data = {
         'Age': [age],
         'Gender': [gender],
         'Blood Type': [blood_type],
         'Medical Condition': [medical_condition],
-        'Insurance Provider': [insurance_provider],
         'Billing Amount': [billing_amount],
         'Admission Type': [admission_type],
         'Medication': [medication],
         'Length of Stay': [length_of_stay]
     }
     feature_columns = ['Age', 'Gender', 'Blood Type', 'Medical Condition', 
-                       'Insurance Provider', 'Billing Amount', 'Admission Type', 
-                       'Medication', 'Length of Stay']
+                       'Billing Amount', 'Admission Type', 'Medication', 'Length of Stay']
     features = pd.DataFrame(data)
     features = features[feature_columns]
     return features
